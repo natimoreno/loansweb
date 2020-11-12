@@ -1,0 +1,68 @@
+
+.bg-login {
+    background: var(--blue-primary);
+    background-image: url('../img/bg-login.png') !important;
+    background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+    height: 100vh;
+}
+.card-login {
+    background-color: var(--gray-dark-1);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: none !important;
+    margin-top: 20vh;
+  
+}
+.btn-login {
+    padding: 8px 60px !important;
+    font-size: 0.99em !important;
+    font-weight: 400 !important;
+}
+.brand-title{
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 3.3rem !important;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+.brand-subtitle {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 0.95rem !important;
+    color: var(--white);
+    text-align: center;
+}
+.form-signin {
+    width: 100%;
+}
+a {
+    font-size: 0.88em;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    font-family: var(--font-opensans);
+   
+}
+ 
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center; 
+    font-family: var(--font-opensans);
+}
+ 
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center; 
+    font-family: var(--font-opensans);
+}
+ 
+:-ms-input-placeholder {  
+    text-align: center; 
+    font-family: var(--font-opensans);
+}
+

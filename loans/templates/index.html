@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap css-->
+	<link rel="stylesheet" href="{% static "css/bootstrap-4.3.1.min.css" %}">
+	<!-- Material Desing Icons 3.9.97 -->
+	<link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
+
+    <title>{% block title %}LOANS{% endblock %}</title>
+	<nav class="navbar navbar-dark bg-dark">
+	  <span class="navbar-brand mb-0 h1"><a href="/login/">LOANs</a></span>
+	  <div class="row justify-content-md-center">
+		  <span class="navbar-brand mb-0 h1"><a href="/loans/"><span class="mdi mdi-playlist-check pr-5"> Manage Loans</span></a></span>
+		  <span class="navbar-brand mb-0 h1"><a href="/newloan/"><span class="mdi mdi-cash-multiple pr-3"> Get Now</span></a></span>
+		  {% if user.is_authenticated %}
+		  <span class="navbar-brand mb-0 h1"><a href="/logout/"><span class="mdi mdi-account-check"> Logout</span></a></span>
+		  {% endif %}
+	  </div>
+	</nav>
+</head>
+<body>
+	{% block content %}{% endblock %}
+	{% block new %}{% endblock %}
+	<hr>
+	<footer>
+	  <div class="footer-copyright text-center py-3">© 2020 Unlicense.</div>
+	</footer>
+	<!-- jQuery - Popper.js - Bootstrap JS-->
+	<script src="{% static "js/jquery.min.js" %}"></script>
+	<script src="{% static "js/popper.min.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+</body>
+</html>

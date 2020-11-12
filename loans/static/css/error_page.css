@@ -1,0 +1,18 @@
+.bg-page-error {
+    background: var(--blue-primary);
+    background-image: url('../img/bg-404.png') !important;
+    background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+    height: 100vh;
+}
+.mt-page-error {
+    margin-top: 30vh;
+}
+.text-h1 {
+    font-size: 2em !important;
+}
+.text-h2 {
+    font-size:  1.7em !important;
+}

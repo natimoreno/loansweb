@@ -1,0 +1,24 @@
+thead {
+    font-size: 0.95em !important;
+}
+.table td, .table th {
+    padding: .45rem !important;
+    vertical-align: middle !important;
+    border-top: 1px solid var(--gray-light-1) !important;
+}
+.table td {
+    font-size: 0.95em;
+    font-weight: 400;
+    color: var(--gray-dark-1) !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--gray-light-3) !important;
+}
+@media (max-width: 1366px){
+    .font-table {
+        font-size: 0.90vw !important;
+    }
+    .own-actions {
+        width: 85px;
+    }
+}

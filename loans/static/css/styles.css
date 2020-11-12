@@ -1,0 +1,53 @@
+@import url("colors.css");
+@import url("fonts.css");
+@import url("buttons.css");
+@import url("forms.css");
+@import url("tables.css");
+@import url("tabs.css");
+@import url("menu.css");
+@import url("siderbar.css");
+@import url("login.css");
+@import url("header.css");
+@import url("error_page.css");
+
+
+* {
+    font-family: var(--font-opensans);
+}
+
+body {
+    background-color: var(--gray-light-2) !important;
+    overflow-x: hidden !important;
+}
+.strech-bottom {
+    display: flex;
+    align-items: stretch;
+}
+.bg-title {
+    background-color: var(--gray-dark-1);
+    background-image: url('../img/bg-title.png');
+    background-position: top center;
+	background-repeat:  no-repeat;
+}
+.datetime {
+    padding-top: 23px; 
+}
+.dots-inline{
+    vertical-align: super;
+}
+.footer-custom {
+    color: var(--gray-dark-2) !important;
+    padding: 2em;
+    margin-left: 1em;
+}
+/* Responsive Map */
+@media (min-width: 1200px){
+    #cesiumContainer {
+        height: 70vh;
+    }
+}
+@media (min-width: 1920px){
+    #cesiumContainer {
+        height: 65vh;
+    }
+}

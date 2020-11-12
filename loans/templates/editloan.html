@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block new %}
+<hr>
+<div class="container" id="edit">
+        {% if message != "" %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        {% endif %}
+        <div class="row justify-content-md-center">
+            <form method="post" content="text/html; charset='UTF-8'">
+                {% csrf_token %}
+                {% autoescape off %}
+                {% for field in form %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3 col-form-label">
+                            {{field.label}}
+                        </div>
+                        <div class="col-sm-2 col-form-label">
+                            {{ field }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endautoescape %}
+                <div class="col-sm-4 float-right">
+                     <input class="btn btn-dark" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+p.scenario-name {
+    margin-top: 23px;
+    margin-right: 36px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.select-sce {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+.select-sce select {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: inherit;
+    padding: .5em;
+    padding-right: 2.5em;	
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; 
+}
+.select-sce option {
+    color: var(--gray-dark-1);
+}
+.select-sce:focus {
+    background-color: transparent !important;
+}
+.select-sce::before,
+.select-sce::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+.select-sce::after { 
+    content: "\25BC";
+    height: 1em;
+    font-size: .9em;
+    line-height: 1;
+    right: 0.65em;
+    top: 50%;
+    margin-top: -.5em;
+}
+.select-sce::before { 
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 3px 3px 0;
+}
+.select-sce select[disabled] {
+    color:rgba(68, 175, 169, 0.3);
+}
+.select-sce select[disabled]::after {
+    color:rgba(68, 175, 169, 0.1);
+}
+.select-sce::after {
+    color: rgba(255, 255, 255, 1)
+}
+
+@media (min-width: 1920px){
+    p.scenario-name {
+        margin-right: 180px !important;
+    }
+    .select-sce {
+        margin-left: -15px;
+    }
+}
+@media (max-width: 1366px){
+    .select-sce {
+        margin-left: 30px !important;
+    }
+}

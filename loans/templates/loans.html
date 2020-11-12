@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<div class="d-flex" id="loans_wrapper">
+    {% if latest_client_list %}
+        <table class="table table-striped table-responsive-sm text-center mt-2">
+            <thead class="text-light bg-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">DU</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for client in latest_client_list %}
+              <tr>
+                <td scope="row">{{client.id}}</td>
+                <td>{{client.du}} </td>
+                <td>{{client.name}} </td>
+                <td>{{client.surname}}</td>
+                <td>{{client.gender}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.total}}</td>
+                <td><h1><a href="/editloan/{{ client.id }}"><span class="mdi mdi-account-edit"></span></a></h1></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
+                        <h1><span class="mdi mdi-sync-alert"></span></h1>
+                        <p>There are not loaded loans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

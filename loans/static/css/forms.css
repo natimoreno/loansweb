@@ -1,0 +1,43 @@
+label {
+   color: var(--gray-dark-1) !important;
+}
+.card-footer {
+    background-color: var(--gray-light-4) !important;
+}
+.form-control:focus {
+    border-color: var(--blue-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(68, 175, 169, 0.25) !important;
+}
+.calendar {
+    background-color: var(--blue-primary) !important;
+    color: var(--white) !important;
+    border-color: var(--blue-primary) !important;
+}
+.calendar:hover {
+    background-color: var(--blue-seconday) !important;
+}
+.time { 
+    background-color: var(--blue-primary) !important;
+    color: var(--white) !important;
+    border-color: var(--blue-primary) !important;
+}
+.time:hover {
+    background-color: var(--blue-sacondary) !important;
+}
+.btn-link {
+    color: var(--blue-primary) !important;
+}
+.btn-link:hover {
+    color: var(--blue-sacondary) !important;
+}
+.ngb-dp-weekday {
+    color: var(--blue-primary) !important;
+}
+.btn-light {
+    color: var(--gray-dark-1) !important;
+}
+.input-group-text {
+    color: var(--white) !important;
+    background-color: var(--blue-primary) !important;
+    border: 1px solid var(--blue-primary) !important;
+}

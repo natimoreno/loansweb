@@ -1,0 +1,70 @@
+:root {
+--blue-primary:  #2553eb;
+--blue-secondary: #1679f8;
+--gray-dark-1: #1c2b45;
+--gray-dark-2: #364661;
+--gray-dark-3: #bcc5d5;
+--gray-light-1: #eaedf0;
+--gray-light-2: #f1f5f9;
+--gray-light-3: #e8eeee;
+--gray-light-4: #f6f8fa;
+--gray-disable-bg: #dcdcdc;
+--gray-disable-text: #adadad;
+--red: #c0392b;
+--green: #058444;
+}
+
+/* Background Colors */
+.bg-blue-primary {
+    background-color: var(--blue-primary) !important;
+}
+.bg-gray-dark-1 {
+    background-color: var(--gray-dark-1) !important;
+}
+.bg-gray-dark-2 {
+    background-color: var(--gray-dark-2) !important;
+}
+.bg-gray-dark-3 {
+    background-color: var(--gray-dark-3) !important;
+}
+.bg-gray-light-1 {
+    background-color: var(--gray-light-1) !important;
+}
+.bg-gray-light-2 {
+    background-color: var(--gray-light-2) !important;
+}
+.bg-gray-light-3 {
+    background-color: var(--gray-light-3) !important;
+}
+.bg-gray-light-4 {
+    background-color: var(--gray-light-4) !important;
+}
+.bg-error {
+    background-color: var(--red) !important;
+}
+
+/* Text Colors */
+.text-green-primary {
+    color: var(--blue-primary) !important;
+}
+.text-gray-dark-1 {
+    color: var(--gray-dark-1) !important;
+}
+.text-gray-dark-2 {
+    color: var(--gray-dark-2) !important;
+}
+.text-gray-dark-3 {
+    color: var(--gray-dark-3) !important;
+}
+.text-gray-light-1 {
+    color: var(--gray-light-1) !important;
+}
+.text-gray-light-2 {
+    color: var(--gray-light-2) !important;
+}
+.text-gray-light-3 {
+    color: var(--gray-light-3) !important;
+}
+.text-gray-light-4 {
+    color: var(--gray-light-4) !important;
+}
