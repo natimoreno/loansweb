@@ -23,6 +23,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('newloan/', views.newloan, name='newloan'),
     path('editloan/<int:client_id>/', views.editloan, name='editloan'),
+    path('deleteloan/<int:client_id>/', views.deleteloan, name='deleteloan'),
     path('loans/', views.loans, name='loans'),
     path('result/', views.result, name='result'),
 ]

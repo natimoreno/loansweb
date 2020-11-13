@@ -19,7 +19,7 @@ la API Rest que retorna el resultado de la solicitud de prestamos.
 ```
 mysite/.env
 
-URL="xxxx"
+URL="https://dominio/api/v4/scoring/pre-score/"
 CREDENTIAL="xxxxx"
 ```
 

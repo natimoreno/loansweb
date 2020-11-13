@@ -97,6 +97,23 @@ def editloan(request, client_id):
 
 
 @login_required(login_url='login')
+def deleteloan(request, client_id):
+    """Delete loan view.
+
+    Args:
+        request: request
+        client_id: client id
+    """
+
+    obj = get_object_or_404(Client, pk=client_id)
+    obj.delete()
+    return render(request,
+                  'result.html',
+                  {'edit': 'deleting'}
+                  )
+
+
+@login_required(login_url='login')
 def loans(request):
     """Loans view. """
     latest_client_list = Client.objects.order_by('-id')[:5]
