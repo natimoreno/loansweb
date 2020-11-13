@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="cols-12">
+            {% if edit == 'not_edit' %}
+                {% if has_error == 'true' %}
+                    <div class="alert alert-danger" role="alert">
+                        <div class="row justify-content-md-center">
+                            {{ status }}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="alert alert-info" role="alert">
+                        <div class="row justify-content-md-center">
+                            {{ status }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            <div class="text-center" style="height: 200px;"><h3>Thanks you !</h3></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

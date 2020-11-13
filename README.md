@@ -9,15 +9,24 @@
 Environment
 
 ```
-git clone <url>
+git clone https://github.com/natimoreno/loansweb.git
 makevirtualenv --python <version> <name>
 pip install -r requeriments.txt
+```
+
+En el archivo mysite/.env configurar las credenciales para
+la API Rest que retorna el resultado de la solicitud de prestamos.
+```
+mysite/.env
+
+URL="xxxx"
+CREDENTIAL="xxxxx"
 ```
 
 Django
 
 ```
-python manage.py migrate loans
+python manage.py migrate
 python manage.py createsuperuser 
 python manage.py runserver
 ```

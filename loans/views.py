@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from loans.forms import ClientForm
 from loans.models import Client
+from mysite.settings import LOAN_CREDENTIAL, LOAN_URI
+import requests
 
 
 def index(request):
@@ -12,9 +14,9 @@ def index(request):
     return render(request, 'index.html')
 
 
-def thank(request):
+def result(request):
     """Thanl view."""
-    return render(request, 'thank.html')
+    return render(request, 'result.html')
 
 
 def newloan(request):
@@ -23,7 +25,7 @@ def newloan(request):
     Args:
         request: request
     """
-    context = RequestContext(request)
+    context = RequestContext(requests)
     error = ""
 
     if request.method == 'POST':
@@ -31,7 +33,16 @@ def newloan(request):
 
         if form.is_valid():
             form.save(commit=True)
-            return redirect('thank')
+
+            dni = form.cleaned_data['du']
+            result = get_loan_result(dni)
+
+            return render(request,
+                          'result.html',
+                          {'edit': 'not_edit',
+                           'status': str(result['status']).capitalize(),
+                           'has_error': str(result['has_error']).lower()}
+                          )
         else:
             error = form.errors
     else:
@@ -39,8 +50,20 @@ def newloan(request):
     return render(
         request,
         'newloan.html',
-        {'form': form, 'message': error }
+        {'form': form, 'message': error}
     )
+
+
+def get_loan_result(du):
+    """Ger loan result.
+
+    Arg
+        du: dni
+    """
+    url = '{}{}'.format(LOAN_URI, du)
+    headers = {"credential": LOAN_CREDENTIAL}
+    response = requests.get(url, headers=headers)
+    return response.json()
 
 
 @login_required(login_url='login')
@@ -60,7 +83,10 @@ def editloan(request, client_id):
         if form.is_valid():
             form.save()
             obj.save()
-            return redirect('thank')
+            return render(request,
+                          'result.html',
+                          {'edit': 'edit'}
+                          )
         else:
             error = form.errors
     return render(

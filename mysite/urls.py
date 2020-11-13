@@ -24,7 +24,7 @@ urlpatterns = [
     path('newloan/', views.newloan, name='newloan'),
     path('editloan/<int:client_id>/', views.editloan, name='editloan'),
     path('loans/', views.loans, name='loans'),
-    path('thank/', views.thank, name='thank'),
+    path('result/', views.result, name='result'),
 ]
 
 # Add Django site authentication urls (for login, logout, password management)
