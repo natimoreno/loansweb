@@ -26,7 +26,13 @@
                 <td>{{client.gender}}</td>
                 <td>{{client.email}}</td>
                 <td>{{client.total}}</td>
-                <td><h1><a href="/editloan/{{ client.id }}"><span class="mdi mdi-account-edit"></span></a></h1></td>
+                <td>
+                    <div class="row justify-content-md-center">
+                        <h2><a href="/editloan/{{ client.id }}"><span class="mdi mdi-account-edit"></span></a></h2>
+                        <h2><a href="/deleteloan/{{ client.id }}"><span class="mdi mdi-delete-circle-outline"></span></a></h2>
+                    </div>
+                </td>
+
               </tr>
               {% endfor %}
             </tbody>
